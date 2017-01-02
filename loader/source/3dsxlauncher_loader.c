@@ -1,4 +1,4 @@
-#include <string.h>
+# include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/stat.h>
@@ -13,7 +13,7 @@ extern u32 PAYLOAD_TEXTMAXSIZE;
 
 extern Handle gspGpuHandle;
 
-u8 *filebuffer;
+u8 *filebuffer = NULL;
 u32 filebuffer_maxsize;
 
 char regionids_table[7][4] = {//https://www.3dbrew.org/wiki/Nandrw/sys/SecureInfo_A
@@ -30,12 +30,6 @@ void gxlowcmd_4(u32* inadr, u32* outadr, u32 size, u32 width0, u32 height0, u32 
 {
 	GX_TextureCopy(inadr, width0 | (height0<<16), outadr, width1 | (height1<<16), size, flags);
 }
-
-Result gsp_flushdcache(u8* adr, u32 size)
-{
-	return GSPGPU_FlushDataCache(adr, size);
-}
-
 typedef struct {	
 	u32 uniqueID;
 	u16 categoryID;
