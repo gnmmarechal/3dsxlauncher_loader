@@ -38,7 +38,7 @@ NO_SMDH		:=	true
 VERSION	:=	v1.1
 
 APP_TITLE	:=	3dsxlauncher_loader $(VERSION)
-APP_DESCRIPTION	:=	This boots a modified hblauncher-payload.
+APP_DESCRIPTION	:=	This boots a modified *hax payload.
 APP_AUTHOR	:=	Rinnegatamante
 
 #---------------------------------------------------------------------------------
